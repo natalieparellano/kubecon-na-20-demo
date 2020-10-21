@@ -28,8 +28,9 @@ pe "docker pull buildpacksiodev/hello-kpack"
 
 cmd
 
-pe "echo \"old id: $old_id
-new id: $new_id\""
+echo "old id: $old_id"
+
+echo "new id: $new_id"
 
 cmd
 
@@ -41,9 +42,9 @@ pe "kubectl describe clusterstack base"
 
 pe "cd ../kpack"
 
-cmd
+vim stack.yaml
 
-pe "kubectl apply -f ./stack.yml"
+pe "kubectl apply -f ./stack.yaml"
 
 pe "kubectl get pods --watch"
 
@@ -51,12 +52,13 @@ cmd
 
 pe "kubectl logs $pod --all-containers=true"
 
-pe "docker pull buildpacksio/hello-kpack"
+pe "docker pull buildpacksiodev/hello-kpack"
 
 cmd
 
-pe "echo \"old id: $old_id
-new id: $new_id
-rebase id: $rebase_id\""
+echo "old id: $old_id"
 
+echo "new id: $new_id"
+
+echo "rebase id: $rebase_id"
 
