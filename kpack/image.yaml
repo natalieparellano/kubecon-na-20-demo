@@ -1,0 +1,16 @@
+apiVersion: kpack.io/v1alpha1
+kind: Image
+metadata:
+  name: hello-kpack
+  namespace: default
+spec:
+  tag: buildpacksiodev/hello-kpack
+  serviceAccount: tutorial-service-account
+  builder:
+    name: my-builder
+    kind: Builder
+  source:
+    git:
+      url: https://github.com/natalieparellano/kubecon-na-20-demo
+      revision: main
+    subPath: app
