@@ -14,8 +14,6 @@ pe "cd ../app && ls"
 
 pe "docker pull buildpacksiodev/hello-kpack"
 
-cmd
-
 pe "vim src/main/resources/templates/index.html"
 
 pe "git add . && git commit -m \"new commit\""
@@ -25,12 +23,6 @@ pe "git push"
 pe "kubectl get pods --watch"
 
 pe "docker pull buildpacksiodev/hello-kpack"
-
-cmd
-
-echo "old id: $old_id"
-
-echo "new id: $new_id"
 
 cmd
 
@@ -53,12 +45,4 @@ cmd
 pe "kubectl logs $pod --all-containers=true"
 
 pe "docker pull buildpacksiodev/hello-kpack"
-
-cmd
-
-echo "old id: $old_id"
-
-echo "new id: $new_id"
-
-echo "rebase id: $rebase_id"
 
