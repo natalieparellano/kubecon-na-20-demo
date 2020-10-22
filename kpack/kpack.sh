@@ -12,9 +12,7 @@ clear
 
 pe "cat ./image.yaml"
 
-pe "docker pull buildpacksiodev/hello-kpack"
-
-echo -n b50649790825aeebd263158ba0c1d271e4fcd379 | pbcopy
+echo -n 70284a1920a97a3ec1e6b73eccdf41ba06ef94cd | pbcopy
 
 pe "vim ./image.yaml"
 
@@ -22,15 +20,13 @@ pe "kubectl apply -f ./image.yaml"
 
 pe "kubectl get pods --watch"
 
-pe "docker pull buildpacksiodev/hello-kpack"
-
 cmd
 
 pe "kubectl logs $pod --all-containers=true"
 
 pe "kp build status hello-kpack"
 
-echo ########
+echo "###"
 
 pe "kubectl describe image hello-kpack"
 
@@ -46,6 +42,7 @@ cmd
 
 pe "kubectl logs $pod --all-containers=true"
 
+pe "kp build status hello-kpack"
+
 pe "docker pull buildpacksiodev/hello-kpack"
 
-pe "kp build status hello-kpack"
