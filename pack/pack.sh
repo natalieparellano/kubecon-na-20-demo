@@ -16,6 +16,3 @@ pe "cd ../app && ls"
 
 pe "pack build hello-pack --builder gcr.io/buildpacks/builder:v1"
 
-pe "docker run --rm -p 8080:8080 hello-pack"
-
-pe "pack build buildpacksiodev/hello-pack --builder gcr.io/buildpacks/builder:v1 --publish"

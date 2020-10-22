@@ -12,5 +12,5 @@ spec:
   source:
     git:
       url: https://github.com/natalieparellano/kubecon-na-20-demo
-      revision: b50649790825aeebd263158ba0c1d271e4fcd379
+      revision: 70284a1920a97a3ec1e6b73eccdf41ba06ef94cd
     subPath: app
